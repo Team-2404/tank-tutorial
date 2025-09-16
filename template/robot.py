@@ -47,3 +47,31 @@ class MyRobot(wpilib.TimedRobot):
 
 if __name__ == "__main__":
     wpilib.run(MyRobot)
+
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
+# bob was here
