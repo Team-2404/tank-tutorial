@@ -35,6 +35,16 @@ class MyRobot(wpilib.TimedRobot):
         left_y = self.pad.getLeftY()
         right_y = self.pad.getRightY()
 
+        if left_y > 0.4:
+            left_y = 0.4
+        elif left_y < -0.4:
+            left_y = -0.4
+
+        if right_y > 0.4:
+            right_y = 0.4
+        elif right_y < -0.4:
+            right_y = -0.4
+
         # 3. Turn motors
         self.drivetrain.tankDrive(left_y, right_y)
 
