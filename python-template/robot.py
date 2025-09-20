@@ -33,13 +33,11 @@ class MyRobot(wpilib.TimedRobot):
 
         # 1. Read button / joystick
         left_y = self.pad.getLeftY()
-        left_x = self.pad.getLeftX()
-
+        right_x = self.pad.getRightX()
 
         # 2. Calculate 
         speed = left_y
-        rotation = -left_x
-
+        rotation = -right_x
 
         # 3. Turn motors
         self.drivetrain.arcadeDrive(speed, rotation)
