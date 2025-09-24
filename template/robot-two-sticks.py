@@ -39,7 +39,7 @@ class MyRobot(wpilib.TimedRobot):
         right_y /= 2.5
 
         # 3. Turn motors
-        self.drivetrain.tankDrive(left_y, right_y)
+        self.drivetrain.tankDrive(right_y, left_y)
 
 
 if __name__ == "__main__":
