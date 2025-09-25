@@ -51,8 +51,8 @@ class MyRobot(wpilib.TimedRobot):
 
 
             # 2. Calculate 
-            speed = left_y
-            rotation = -left_x
+            speed = left_y /2.5
+            rotation = -left_x /2.5
 
 
             # 3. Turn motors
