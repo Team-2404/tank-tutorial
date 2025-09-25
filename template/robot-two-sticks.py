@@ -58,8 +58,11 @@ class MyRobot(wpilib.TimedRobot):
             # 3. Turn motors
             self.drivetrain.arcadeDrive(speed, rotation)
         
-        if self.pad.getAButtonPressed():
-            self.drivemode *= -1
+        if self.pad.getAButton():
+            self.drivemode = 1
+
+        if self.pad.getBButton():
+            self.drivemode = -1
 
 
 if __name__ == "__main__":
