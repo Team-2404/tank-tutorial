@@ -6,6 +6,11 @@ import rev
 class MyRobot(wpilib.TimedRobot):
     def robotInit(self):
         # Define what gamepad I'm using
+
+
+        # mode 1 = tank, mode -1 = arcade
+        self.drivemode == 1
+                                                                                                                                          
         self.pad = wpilib.XboxController(0)
 
         # Define drive motors 
@@ -29,17 +34,32 @@ class MyRobot(wpilib.TimedRobot):
         pass
 
     def teleopPeriodic(self):
-        # This function gets called over and over again during teleoperated mode
+        if self.drivemode == 1:
+            # 1. Read button / joystick
+            left_y = self.pad.getLeftY()
+            right_y = self.pad.getRightY()
 
-        # 1. Read button / joystick
-        left_y = self.pad.getLeftY()
-        right_y = self.pad.getRightY()
+            left_y /= 2.5
+            right_y /= 2.5
 
-        left_y /= 2.5
-        right_y /= 2.5
+            # 3. Turn motors
+            self.drivetrain.tankDrive(right_y, left_y)
 
-        # 3. Turn motors
-        self.drivetrain.tankDrive(right_y, left_y)
+        elif self.drivemode == -1:
+            left_y = self.pad.getLeftY()
+            left_x = self.pad.getLeftX()
+
+
+            # 2. Calculate 
+            speed = left_y
+            rotation = -left_x
+
+
+            # 3. Turn motors
+            self.drivetrain.arcadeDrive(speed, rotation)
+        
+        if self.pad.getAButtonPressed():
+            self.drivemode *= -1
 
 
 if __name__ == "__main__":
