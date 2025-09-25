@@ -9,7 +9,7 @@ class MyRobot(wpilib.TimedRobot):
 
 
         # mode 1 = tank, mode -1 = arcade
-        self.drivemode == 1
+        self.drivemode = 1
                                                                                                                                           
         self.pad = wpilib.XboxController(0)
 
@@ -67,3 +67,4 @@ if __name__ == "__main__":
 
 # Dylan was here
 #bob was here
+#bob2
